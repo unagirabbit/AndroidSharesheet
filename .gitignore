@@ -69,7 +69,7 @@ PluginProject/**/.idea/workspace.xml
 PluginProject/**/.idea/navEditor.xml
 PluginProject/**/.idea/assetWizardSettings.xml
 PluginProject/**/.DS_Store
-PluginProject/**//build
-PluginProject/**//captures
+PluginProject/**/build
+PluginProject/**/captures
 PluginProject/**/.externalNativeBuild
 PluginProject/**/.cxx
