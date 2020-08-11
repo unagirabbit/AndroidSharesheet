@@ -58,3 +58,18 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+# Android
+PluginProject/**/*.iml
+PluginProject/**/.gradle
+PluginProject/**/local.properties
+PluginProject/**/.idea/caches
+PluginProject/**/.idea/libraries
+PluginProject/**/.idea/modules.xml
+PluginProject/**/.idea/workspace.xml
+PluginProject/**/.idea/navEditor.xml
+PluginProject/**/.idea/assetWizardSettings.xml
+PluginProject/**/.DS_Store
+PluginProject/**//build
+PluginProject/**//captures
+PluginProject/**/.externalNativeBuild
+PluginProject/**/.cxx
