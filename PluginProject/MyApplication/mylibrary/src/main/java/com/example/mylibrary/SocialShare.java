@@ -37,18 +37,21 @@ public class SocialShare
         // 投稿するメッセージ
         targetIntent.putExtra(Intent.EXTRA_TEXT, message);
 
-        // API24以降はFileProviderを利用する
-        if(Build.VERSION.SDK_INT < Build.VERSION_CODES.N)
+        if(!filePath.isEmpty())
         {
-            File file = new File(filePath);
-            Uri uri = Uri.fromFile(file);
-            targetIntent.putExtra(Intent.EXTRA_STREAM, uri);
-        }
-        else
-        {
-            File file = new File(filePath);
-            Uri uri = FileProvider.getUriForFile(context, "com.DefaultCompany.AndroidSharesheet.fileprovider", file);
-            targetIntent.putExtra(Intent.EXTRA_STREAM, uri);
+            // API24以降はFileProviderを利用する
+            if(Build.VERSION.SDK_INT < Build.VERSION_CODES.N)
+            {
+                File file = new File(filePath);
+                Uri uri = Uri.fromFile(file);
+                targetIntent.putExtra(Intent.EXTRA_STREAM, uri);
+            }
+            else
+            {
+                File file = new File(filePath);
+                Uri uri = FileProvider.getUriForFile(context, "com.DefaultCompany.AndroidSharesheet.fileprovider", file);
+                targetIntent.putExtra(Intent.EXTRA_STREAM, uri);
+            }
         }
 
         // targetIntentで指定したTypeと一致するActivityを取得する
